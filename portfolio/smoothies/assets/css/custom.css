@@ -134,17 +134,58 @@
 }
 
 /* Global font */
-body { font-family: var(--global-font) }
+body { font-family: 'Neucha', cursive; }
 section > p.standfirst {
     font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1600 - 320)));  }
-    
 
+/* Theme-one */
+.theme-one p { color: var(--purple-500) }
+.theme-one li { color: var(--purple-500) }
 
-/* ========= THEME ONE ========== */
+/*Theme-two*/
+.theme-two { background-color: var(--pink-200) }
+.theme-two .col-2 h2 { color: var(--red-500) }
 
-/* Background colour */
-.theme-one .col-1 h3 { color: var(--gray-700) }
-.theme-one p { color: var(--purple-500)} 
-.theme-one li{color: var(--purple-500)}
+/*Theme-three*/
+.theme-three { background-color: var(--green-200) }
+.theme-three .col-2 h2 { color: var(--red-500) }
+
+/*Theme-four*/
+.theme-four { background-color: var(--purple-400) }
+.theme-four .col-2 h2 { color: var(--white-000) }
+.theme-four p { color: var(--white-000) }
+.theme-four li { color: var(--white-000) }
+
+/*Theme-five*/
+.theme-five { background-color: var(--yellow-200) }
+.theme-five .col-2 h2 { color: var(--red-500) }
+
+/*Font-size, spacing and margin*/
+section > p.standfirst {
+    font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1600 - 320)));       
+}
+
+.hero-block h1 {
+    font-size: calc(60px + (132 - 60) * ((100vw - 320px)/ (1600 - 320)));  
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+                        
+.hero-block h2 {
+    font-size: calc(32px + (64 - 32) * ((100vw - 320px)/ (1600 - 320)));  
+    letter-spacing: 1px;
+}
+                        
+.cols-2-split .col-2 h2 {
+    font-size: calc(32px + (58 - 32) * ((100vw - 320px) / (1600 - 320)));  
+    letter-spacing: 2px;
+}
+                        
+.cols-2-split .col-2 p {
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1600 - 320)));  
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
 
 
