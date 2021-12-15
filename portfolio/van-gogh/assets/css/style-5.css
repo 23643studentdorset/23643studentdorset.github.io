@@ -90,4 +90,24 @@ img {
     height: 100%;
 }
 
+/*Footer*/
+footer { background-color: var(#212529) }
+footer h2 { color: var(#f8f9fa) }
+footer h3 { color: var(#f8f9fa) }
+footer ul.footer-links li a:link, 
+footer ul.footer-links li a:visited { color: var(#f8f9fa); text-decoration-color: var(#f8f9fa) }
+footer p.privacy a:link, 
+footer p.privacy a:visited { color: var(#f8f9fa); text-decoration-color: var(#f8f9fa) }
+footer ul.footer-links li a:focus, 
+footer ul.footer-links li a:hover, 
+footer ul.footer-links li a:active { color: var(#dc3545); text-decoration-color: var(#dc3545) }
+footer p.privacy a:focus, 
+footer p.privacy a:hover, 
+footer p.privacy a:active { color: var(#dc3545); text-decoration-color: var(#dc3545) }
+footer ul.footer-icons li a:focus i, 
+footer ul.footer-icons li a:hover i, 
+footer ul.footer-icons li a:active i { color: var(#dc3545)}
+footer ul.footer-icons li a:link i, 
+footer ul.footer-icons li a:visited i { color: var(#f8f9fa)}
+
 

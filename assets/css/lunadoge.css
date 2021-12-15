@@ -2048,7 +2048,7 @@ footer p.privacy a:hover, footer p.privacy a:active {
     background-color: transparent;
 }
 
-.container-menu a:first-child img { width: 200px; height: 40px; outline: 0 }
+.container-menu a:first-child img { width: 400px; height: 50px; outline: 0 }
 
 .container-menu a:first-child { background-color: transparent }
 
@@ -2155,6 +2155,8 @@ footer p.privacy a:hover, footer p.privacy a:active {
 /* Mobiles */
 @media (max-width: 767px) {
     .container-menu { padding: 0 8% 0 0 }
+
+    .container-menu a:first-child img { width: 300px; height: 37.5px; outline: 0 }
 
     .container-menu ul { 
         position: fixed; 

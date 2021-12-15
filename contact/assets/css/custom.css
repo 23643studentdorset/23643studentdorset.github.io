@@ -5,7 +5,7 @@
     --sans-serif: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
 
     /* Color variables */
-    --gray-900: #000;
+    --black-000: #000;
     --white-000: #fff;
 
     --gray-100: #f8f9fa;
@@ -178,15 +178,23 @@ body { font-family: 'Noto Serif JP', serif; }
 .container-menu a#btn-cta:hover,
 .container-menu a#btn-cta:active { border-color: var(--red-200) }
 
-
-
-
-
-
-
 /*header*/
 header.hero-block h1 { color: var(--gray-100) }
-header.hero-block h2 { color: var(--gray-100) }
+
+header.hero-block a.btn-primary:link,
+header.hero-block a.btn-primary:visited { background-color: var(--red-500) }
+
+header.hero-block a.btn-primary:focus,
+header.hero-block a.btn-primary:hover,
+header.hero-block a.btn-primary:active { background-color: var(--red-300) }
+
+header.hero-block a.btn-primary:link,
+header.hero-block a.btn-primary:visited { border-color: var(--red-500) }
+
+header.hero-block a.btn-primary:focus,
+header.hero-block a.btn-primary:hover,
+header.hero-block a.btn-primary:active { border-color: var(--red-300) }
+
 header.hero-block a.btn-primary:link,
 header.hero-block a.btn-primary:visited { color: var(--gray-100) }
 
@@ -194,67 +202,34 @@ header.hero-block a.btn-primary:focus,
 header.hero-block a.btn-primary:hover,
 header.hero-block a.btn-primary:active { color: var(--white-000) }
 
-header.hero-block a.btn-primary:link,
-header.hero-block a.btn-primary:visited { background-color: var(--red-500) }
-
-header.hero-block a.btn-primary:focus,
-header.hero-block a.btn-primary:hover,
-header.hero-block a.btn-primary:active { background-color: var(--red-200) }
-
-header.hero-block a.btn-primary:link,
-header.hero-block a.btn-primary:visited { border-color: var(--red-500) }
-
-header.hero-block a.btn-primary:focus,
-header.hero-block a.btn-primary:hover,
-header.hero-block a.btn-primary:active { border-color: var(--red-200) }
-
-header.hero-block a.btn-secondary:link,
-header.hero-block a.btn-secondary:visited { color: var(--gray-100) }
-
-header.hero-block a.btn-secondary:focus,
-header.hero-block a.btn-secondary:hover,
-header.hero-block a.btn-secondary:active { color: var(--white-000) }
-
-header.hero-block a.btn-secondary:focus,
-header.hero-block a.btn-secondary:hover,
-header.hero-block a.btn-secondary:active { color: var(--red-500) }
-
-header.hero-block a.btn-secondary:focus,
-header.hero-block a.btn-secondary:hover,
-header.hero-block a.btn-secondary:active { border-color: var(--red-500) }
-
-header.hero-block a.btn-secondary:focus,
-header.hero-block a.btn-secondary:hover,
-header.hero-block a.btn-secondary:active { color: var(--red-500) }
-
-header.hero-block a.btn-secondary:focus,
-header.hero-block a.btn-secondary:hover,
-header.hero-block a.btn-secondary:active { background-color: var(--trans-000) }
 
 
 
-
-
-/* Theme-one*/
-.theme-one { background-color: var(--gray-200) }
-.theme-one .col-1 h2 { color: var(--gray-900) }
-.theme-one .col-1 h3 { color: var(--gray-900) }
-.theme-one .col-3 h3 { color: var(--gray-900) }
-.theme-one .col-3 p { color: var(--gray-900) }
-.theme-one .col-3 li { color: var(--gray-900) }
-.theme-one .col-3 { background-color: var(--gray-400) }
-.theme-one.col-borders .col-3 { border-color: var(--gray-400) }
-
-/*Theme-two*/
-.theme-two .col-1 h2 { color: var(--gray-900) }
-.theme-two .col-1 h3 { color: var(--gray-900) }
-.theme-two .col-3 h3 { color: var(--gray-900) }
-.theme-two .col-3 p { color: var(--gray-900) }
-.theme-two .col-3 li { color: var(--gray-900) }
-.theme-two { background-color: var(--gray-400) }
-.theme-two.col-borders .col-3 { border-color: var(--gray-200) }
-.theme-two .col-3 { background-color: var(--gray-200) }
-
+/*Contact form*/
+#contact-form #btn-submit { background-color: var(--red-500) }
+#contact-form #btn-submit { background-color: var(--red-300) }
+#contact-form #btn-submit { background-color: var(--red-500) }
+#contact-form #btn-submit { border-color: var(--red-500) }
+#contact-form #btn-submit:focus { background-color: var(--red-300) }
+#contact-form #btn-submit:hover { background-color: var(--red-300) }
+#contact-form #btn-submit:focus { border-color: var(--red-300) }
+#contact-form #btn-submit:hover { border-color: var(--red-300) }
+#contact-form #btn-submit { color: var(--gray-100) }
+#contact-form #btn-submit:focus { color: var(--white-000) }
+#contact-form #btn-submit:hover { color: var(--white-000) }
+#contact-form [type="text"] { border-color: var(--gray-200) }
+#contact-form [type="email"] { border-color: var(--gray-200) }
+#contact-form textarea { border-color: var(--gray-200) }
+#contact-form label { color: var(--gray-900) }
+.container-contact-form { background-color: var(--gray-200) }
+#contact-form { background-color: var(--gray-200) }
+#contact-form h2 { color: var(--gray-900) }
+#contact-form p { color: var(--gray-900) }
+#contact-form p a:link { color: var(--gray-900) }
+#contact-form p a:visited { color: var(--gray-900) }
+#contact-form p a:focus { color: var(--red-500) }
+#contact-form p a:hover { color: var(--red-500) }
+#contact-form p:active { color: var(--red-500) }
 
 /*Footer*/
 footer { background-color: var(--gray-900) }
@@ -262,18 +237,21 @@ footer h2 { color: var(--gray-100) }
 footer h3 { color: var(--gray-100) }
 footer ul.footer-links li a:link, 
 footer ul.footer-links li a:visited { color: var(--gray-100); text-decoration-color: var(--gray-100) }
+
 footer p.privacy a:link, 
 footer p.privacy a:visited { color: var(--gray-100); text-decoration-color: var(--gray-100) }
+
 footer ul.footer-links li a:focus, 
 footer ul.footer-links li a:hover, 
 footer ul.footer-links li a:active { color: var(--red-500); text-decoration-color: var(--red-500) }
+
 footer p.privacy a:focus, 
 footer p.privacy a:hover, 
 footer p.privacy a:active { color: var(--red-500); text-decoration-color: var(--red-500) }
+
 footer ul.footer-icons li a:focus i, 
 footer ul.footer-icons li a:hover i, 
 footer ul.footer-icons li a:active i { color: var(--red-500)}
+
 footer ul.footer-icons li a:link i, 
 footer ul.footer-icons li a:visited i { color: var(--gray-100)}
-
-

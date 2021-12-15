@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Web Page Title</title>
-    <meta name="description" content="Sample web page description goes here.">
+    <title>LG Home</title>
+    <meta name="description" content="This is Luciano Gimenez website with his projects">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!--Preload hero-img-->
+    <link rel="preload" href="assets/img/homepage.jpeg" as="img">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCZBCJGK2N"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -23,19 +26,17 @@
 	<meta name="google-site-verification" content="TDfBrkDyMaQVhkpGmXvpbruLI8sNT8JFiusRB7khU-U" />
 
 	<!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/lunadoge.css" />
+    <link rel="stylesheet" href="assets/css/lunadoge.min.css" />
     <link rel="stylesheet" href="assets/css/custom.css" />
 
+    <!--Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 
 	<!-- Font Awesome 5 icons -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
 
-    <!-- Light Awesome icons -->
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-
-    <!-- Google Material Design Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-    rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
@@ -46,14 +47,12 @@
 <body>
 
     <!-- navigation menu -->
-  
-    <nav class="container-menu menu-desktop menu-sticky">
-        <a href="#"><img src="assets/img/website-logo.png" alt="website logo"></a>
+    <nav class="container-menu menu-desktop menu-sticky" style="max-width: 1600px; margin-left: auto; margin-right: auto;">
+        <a href="index.html"><img src="assets/img/LucianoGimenezLogo1.png" alt="website logo"></a>
         <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>            
-            <li><a href="#" id="btn-cta"><span>CTA Link</span><i class="fas fa-arrow-right"></i></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio/index.html">Portfolio</a></li>           
+            <li><a href="contact/index.html" id="btn-cta" class="btn-rounded"><i class="fas fa-envelope"></i><span>Contact us</span></a></li>
         </ul>
         <div class="item-icon">
             <div class="bar1"></div>
@@ -62,64 +61,90 @@
         </div>
     </nav>
 
-    
     <!-- header -->
     <header class="hero-block text-center-desktop text-center-mobile">
         <div class="hero-text-container ">
             
-    <h1 class="text-shadow">Hi, I'm Luciano Gimenez</h1>
-            <h2 class="text-shadow">I'm a computer science student</h2>
+    <h1 class="text-shadow">Luciano Gimenez</h1>
+            <h2 class="text-shadow">Creating, Adapting, Improving</h2>
             <div class="container-btn">
                 <a href="portfolio/index.html" class="btn btn-primary btn-rounded"><i class="fas fa-file-code"></i><span>Portfolio</span></a>
                 <a href="contact/index.html" class="btn btn-secondary btn-rounded"><i class="fas fa-envelope"></i><span>Contact us</span></a>
-            </div>
-            
-            
-            
-            
+            </div>     
         </div>
             <div class="hero-bg-media">
-            <img src="assets/img/homepage.webp" alt="Placeholder image">
+                <source srcset="assets/img/homepage.webp" type="img/webp">
+                <img src="assets/img/homepage.jpeg" alt="Placeholder image">
             </div>
         <div class="bg-overlay"></div>
     </header>
     <!-- main content with sections -->
     <main>
         
-	<section class="container-flex theme-one">
+        <section class="container-flex theme-one img-corners-soft col-borders corners-soft" >
+            <div class="col-1 text-center">
+                <h2>Recent projects</h2>
+                <h3>Below you can see some examples of my recent work.</h3> 
+                
+            </div>
+
+            <div class="col-3">
+                <figure><a href="portfolio/van-gogh/index.html"><img  src="assets/img/project-van-gogh.png" alt="Vincent Van Gogh Project"></a></figure>
+                <h3>Vincent Van Gogh</h3>
+                <p>A summary of the life and work of Dutch artist Vincent van Gogh with an embeded video from YouTube.</p>
+            </div>
+
+            <div class="col-3">
+                <figure><a href="portfolio/fashion/index.html"><img src="assets/img/project-fashion.jpg" alt="Fashion Project"></a></figure>
+                <h3>Snazzy Fashion</h3>
+                <p>A web page for a fashion retailer with a background video that plays in a continuous loop.</p>
+            </div>
+
+            <div class="col-3">
+                <figure><a href="portfolio/smoothies/index.html"><img src="assets/img/project-smoothie.jpg" alt="Smoothies Project"></a></figure><h3>Smooth Smoothies</h3><p>A multi-column, flexbox-based page layout and hero image with a tinted overlay.</p>
+            </div>
+        </section>
+        
+        
+	<section class="container-flex theme-two col-borders corners-soft img-corners-soft">
 		<div class="col-1 text-center">
-			<h2>Recent projects</h2>
-			<h3>Below you can see some examples of my recent work.</h3> 
-            <h3>Check out my <a href="portfolio/index.html">complete portfolio</a>.</h3>
-            
+			<h2>Lorem Malesuada Dolor</h2>
+			
 		</div>
 
 		<div class="col-3">
-			<figure><img src="assets/img/project-van-gogh.png" alt="Vincent Van Gogh Project"></figure>
-			<h3>Vincent Van Gogh</h3>
-			<p>A summary of the life and work of Dutch artist Vincent van Gogh with an embeded video from YouTube.</p>
-		<a href="portfolio/Van Gogh/index.html" class="btn btn-primary btn-rounded"><i class="fas fa-shopping-cart"></i><span>View Project</span></a></div>
+			<figure><img src="assets/img/person_1.jpg" alt="Placeholder image"></figure>
+				<h3>Eric P.</h3>
+
+			
+			<p>I've known him since some years ago. He always has an innovative aproach to problem-solving. Any company would be happy to work with him.</p>
+        </div>
 
 		<div class="col-3">
-			<figure><img src="assets/img/project-fashion.jpg" alt="Fashion Project"></figure>
-			<h3>Snazzy Fashion</h3>
-			<p>A web page for a fashion retailer with a background video that plays in a continuous loop.</p>
-		<a href="portfolio/fashion/index.html" class="btn btn-primary btn-rounded"><i class="fas fa-shopping-cart"></i><span>View Project</span></a></div>
+			<figure><img src="assets/img/person_2.jpg" alt="Placeholder image"></figure>
+				<h3>Roman F.</h3>
+
+			
+			<p>The sprout business we developed together as partners has grown into one of the leading sprouts businesses in South America. Results speak for themselves. Work with him today.</p>
+		</div>
 
 		<div class="col-3">
-			<figure><img src="assets/img/project-smoothie.jpg" alt="Smoothies Project"></figure><h3>Smooth Smoothies</h3><p>A multi-column, flexbox-based page layout and hero image with a tinted overlay.</p>
-		<a href="portfolio/smoothies/index.html" class="btn btn-primary btn-rounded"><i class="fas fa-shopping-cart"></i><span>View Project</span></a></div>
-	</section>    
+			<figure><img src="assets/img/person_3.jpg" alt="Placeholder image"></figure>
+				<h3>Tanja J.</h3>
+            <p>If you are looking for someone who has good taste in music you won't find him here. If you are looking for a telented entrepreneur and programmer in becoming with a good aproach to managing a team - you are in the right place.</p>
+		</div>
+	</section>
+        
+        
 
     </main>
 
     <!-- footer -->
-    
-	<footer>
+    <footer>
 
 		<h2>Luciano Gimenez</h2>
 
-		<h3>I am an innovative Web Designer</h3>
+		<h3>Incursionating into software related projects with a bussiness aproach</h3>
 
 		<ul class="footer-links">
 			<li><a href="index.html">Homepage</a></li>
@@ -128,9 +153,9 @@
 		</ul>
 
 		<ul class="footer-icons">
-			<li><a href="https://linkedin.com/username" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/luciano-gimenez-b288011a5/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 		
-			<li><a href="https://github.com/username" target="_blank"><i class="fab fa-github-square"></i></a></li>
+			<li><a href="https://github.com/23643studentdorset" target="_blank"><i class="fab fa-github-square"></i></a></li>
 			
 			
 		</ul>
@@ -163,5 +188,6 @@ window.cookieconsent.initialise({
 
 </body>
 </html>
+
 
 
