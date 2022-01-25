@@ -43,7 +43,8 @@
             
             <p>You entered: </p>
             <div id="resultBox"></div>
- 
+            
+            <p><button onclick="showUserInput()">Show user input</button></p>
         </div>
 
   
@@ -53,9 +54,9 @@
     <script>
         function showUserInput() {
             /* Place the first name from the input field in a variable */
-
+            let userInput = document.getElementById("fName").value;
             /* Display the value on the web pageo */
-;
+            document.getElementById("resultBox").innerHTML = "<b>"+userInput+"<\/b>";
         }
     </script>
 
