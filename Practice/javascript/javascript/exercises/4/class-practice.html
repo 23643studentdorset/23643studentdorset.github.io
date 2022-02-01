@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+
+
+</head>
+<body>
+    <script>
+    
+    class People {
+    constructor (name, age){
+    this.name = name;
+    this.age = age;
+    
+    
+    }
+    }
+    
+    let luciano = new People ("Luciano", 32);
+    console.log(luciano);
+    
+    //call function displayGreeting
+    displayGreeting("Hello");
+    
+    
+    // Function declaration
+    function displayGreeting(text) 
+    {
+        console.log(text);
+    }      
+
+    function sayGoodBye()
+    {
+        console.log("Good Bye");
+    }
+
+    // Function expressions 
+     const greeting  = (function displayGreeting() 
+    {
+                console.log("Hello 2")
+    });
+
+    // Anonimus Functions 
+    let greeting2  = function() 
+    {
+        console.log("Hello3")
+    };
+
+    greeting2 = () => console.log("Hello 3.1")
+
+    // Arrow Functions 
+    const greeting3  = (number, number2) => 
+    {
+        console.log(number)
+        console.log(number2)
+        console.log(`output: ${number+number2}`)
+    };
+
+    
+    //call greeting (that constains a function) it is better to use constants
+    greeting();
+    greeting2();
+    greeting3(["Luciano","Brendam"], 5);
+
+    //call function sayGoodBye
+    sayGoodBye();
+
+    const sum = (a, b) => {return a+b};
+    let result = sum (5, 21);
+
+    window.alert(result);
+
+    </script>
+</body>
