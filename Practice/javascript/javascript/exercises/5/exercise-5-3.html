@@ -66,11 +66,24 @@
             /* Place the two user-entered numbers in variables */
             let firstNum  = document.getElementById("firstNum").value;
             let secondNum = document.getElementById("secondNum").value;
+            
             /* Convert string inputs to numeric variables */
-            firstNum = parseFloat(firstNum);
-            secondNum = parseFloat(secondNum);
+            //firstNum = parseFloat(firstNum);
+            //secondNum = parseFloat(secondNum);
+            
+            //checks if is a number or not and if it is converts it
+            if (isNaN(firstNum) || isNaN(secondNum)){
+
+
+            }else {
+                firstNum = parseFloat(firstNum);
+                secondNum = parseFloat(secondNum);
+
+            }
+            console.log(typeof(firstNum));
             /* Put sum of the two numbers in a new variable */
             let resultdNum = firstNum + secondNum;
+            
             /* Display the result on the web page */
             document.getElementById("resultNum").innerHTML = "<b>"+resultdNum+"<\/b>";
         }

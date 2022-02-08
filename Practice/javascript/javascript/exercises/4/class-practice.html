@@ -52,14 +52,16 @@
     {
         console.log(number)
         console.log(number2)
-        console.log(`output: ${number+number2}`)
-    };
-
+        //console.log(`output: ${number+number2}`)
+       
+        return [number+number2, number]
+    }
     
     //call greeting (that constains a function) it is better to use constants
     greeting();
     greeting2();
-    greeting3(["Luciano","Brendam"], 5);
+    let output  = greeting3(2, 5);
+    window.alert(output);
 
     //call function sayGoodBye
     sayGoodBye();
