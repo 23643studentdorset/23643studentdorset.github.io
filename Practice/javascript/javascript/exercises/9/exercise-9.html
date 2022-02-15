@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    
+
+</head>
+
+
+<body>
+   
+<script>
+//"Bridget", "Carol", "Christine", "Deborah"
+const userNames = ["Bridget", "2", "Christine", "Deborah"]
+console.log(userNames)
+userNames [0]= "Bridget" 
+console.log(userNames)
+userNames [0] = "Pepe"
+console.log(userNames)
+
+const fruits = ["Apple", "Pineapple", "Banana", "Grapes"];
+console.log("Number of items in fruit array: "+fruits.length);
+
+console.log("Last element: " + fruits[fruits.length-1])
+
+//for each
+fruits.forEach(element => 
+{
+    console.log(element);
+});
+
+//for loop
+for (i = 0; i < fruits.length; i++) 
+{
+  console.log("Element " + i +" " + fruits[i]);
+}
+
+
+//for in
+for (i in fruits) 
+{
+  console.log("Element " + i  + ": " + fruits[i]);
+}
+
+//shift delete the value [0], shift returns the value you are deleting
+const fruits2 = ["Banana", "Orange", "Pineapple", "Mango"];
+console.log(fruits2);
+fruits2.shift();
+let fruitShifted = fruits2.shift();
+console.log(fruitShifted);
+console.log(fruits2);
+
+
+//unshift: add a value at first index
+fruits2.unshift("Lemon");
+console.log(fruits2);
+
+//push and pop, add / remove last element
+fruits2.pop();
+fruits2.push("Lemon Grass");
+console.log(fruits2);
+
+// splice to add (or remove) --> in this example elements starting at position 2,
+// remove 0 elements and after you would have the parameters that you want to add to the array, it can be empty (it's an overloading)
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+fruits3.splice(2, 0, "Lemon", "Kiwi");
+console.log(fruits3);
+
+//remove with splice
+let removedItem = fruits3.splice(3,1);
+console.log(removedItem);
+
+//copying part of an array from index 1 (includes 1) to index 3 (excludes 3), fruits.slice(1) would take from index 1 to the end 
+const fruits4 = ["Banana", "Orange", "Lemon", "Apple", "Grapefruit"];
+const slicedFruits1 = fruits4.slice(1, 3);
+console.log(slicedFruits1);
+
+//converts to a string starting at 0 
+const newString = fruits4.toString(0);
+console.log(newString);
+
+//convert string to array
+let stringToArray = newString.split(",");
+console.log(fruits4);
+
+//mutability 
+let userNames2
+userNames2 = userNames
+userNames2[0] = "Jose"
+console.log(userNames)
+</script>
+    
+
+</body>
+</html>
