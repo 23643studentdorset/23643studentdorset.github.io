@@ -1,0 +1,69 @@
+
+     <!DOCTYPE html><html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Random Colour Generator</title>
+            <style>body{text-align:center}@media (min-width:1200px){header{padding:2% calc((100% - 800px)/ 2) 3% calc((100% - 800px)/ 2);margin:0 auto}}@media (min-width:1025px) and (max-width:1199px){header{padding:3% 14% 4% 14%}}@media (min-width:768px) and (max-width:1024px){header{padding:3% 8% 4% 8%}}@media (max-width:767px){header{padding:6% 13% 9% 13%}}h1 .font-mono{color:#888}body{font-family:sans-serif}li,p{font-size:18px;line-height:1.5}li{margin-bottom:12px}
+            body{background-color: #dbf4e4;}
+            
+            h2 #color-display { background-color: green; font-weight: 400; padding: 10px  }
+            
+            .btn{ display: block; 
+                text-align: center; 
+                margin: 40px auto;
+                padding: 12px 24px;
+                background-color:red;
+                color:white;
+                border-width: 0px;
+                border-radius: 50px;
+                font-size: 22px;}
+            .btn:hover {background-color: darkred;}
+
+            h2{background-color: black; 
+                color: white; 
+                display: inline-block; 
+                padding:12px 24px;
+                box-shadow: 8px 10px 8px grey}
+
+            i{ padding: 0px 10px 0px 0px;}    
+            </style>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        </head>
+        <body>
+        <header>
+            <h1>Random Colour Generator</h1>
+        </header>
+        <main>
+
+            <h2>Background Colour: &nbsp;<span id="color-display">#dbf4e4</span></h2>
+            <button class="btn" id="btn-color" ><i class="fa-solid fa-paint-roller"></i> Click me</button>
+        </main>
+
+        <!-- JavaScript code start below -->
+        <script>
+
+            const arrHex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+            const btnColor = document.querySelector("#btn-color");
+            const strColorDisplay = document.querySelector("#color-display");
+
+            btnColor.addEventListener("click", () => {
+                let strHexColour = "#";
+                for(let i = 0; i < 6; i++){
+                strHexColour += arrHex[getRandomNum()]
+                }
+                console.log("hex:{0}",strHexColour)
+                
+                strColorDisplay.textContent = strHexColour
+                document.body.style.backgroundColor = strHexColour
+            });
+
+            //number between 1-15
+            function getRandomNum() {                
+                return Math.floor(Math.random()*arrHex.length)
+            };
+       </script>
+
+    </body>
+    </html>
