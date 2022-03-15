@@ -9,22 +9,42 @@
 
     <link rel="stylesheet" href="https://munnelly.com/lunevedy/assets/css/lunevedy.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+
     <style>
 
-        body, section { background-color: #fff }
+        body, section { background-color: #d3d3d3 }
         .btn-solid { 
             margin-top: 20px;
             padding: 14px 20px;
             display: inline-block;
             font-size: 20px;
+            background-color: blue;
+            border-color: blue;
+            color:#fff;
         }
 
         .btn-solid:hover { 
-            background-color: blue;
-            border-color: blue;
+            background-color: rgb(86, 84, 194);
+            border-color: rgb(86, 84, 194);
             color: #fff
         }
+        .col-3{
+            box-shadow: 8px 10px 8px #888;
+            border-radius: 25px;
+            border:solid grey;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
+        .col-3 p{
+            font-family: 'lora', serif;
+            font-style: italic;
+        }
     </style>
 
 
@@ -73,9 +93,9 @@
                             let html_block = "";
                             for (i= lowerNum; i <= upperNum; i++) { 
                                 //console.log(`${[i]}: ${data[i].text} Source: ${data[i].author}`);
-                                html_block += `<div class="col-3"><p>${data[i].text}</p><h3>${data[i].author}</h3></div>`;
-                                document.querySelector("#quotes-box").innerHTML = html_block;
+                                html_block += `<div class="col-3"><p><span>&#8220;</span>${data[i].text}<span>&#8221;</span></p><h3>${data[i].author}</h3></div>`;
                             }
+                            document.querySelector("#quotes-box").innerHTML = html_block;
                         });
     
                     })
