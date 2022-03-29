@@ -103,21 +103,20 @@
 
 <body>
 
-    <!-- navigation menu -->
-
-    <nav class="container-menu menu-desktop menu-sticky">
-        <a href="#"><img src="../../../assets/img/website-logo.png" alt="website logo"></a>
-        <ul class="">
-            <li><a href="../../../index.html">Home</a></li>
-            <li><a href="../../../portfolio/index.html">Portfolio</a></li>
-            <li><a href="../../../contact/index.html" id="btn-cta"><span>Contact</span><i class="fas fa-arrow-right"></i></a></li>
-        </ul>
-        <div class="item-icon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </nav>
+   <!-- navigation menu -->
+   <nav class="container-menu menu-desktop menu-sticky" style="max-width: 1600px; margin-left: auto; margin-right: auto;">
+    <a href="../../../index.html"><img src="../../../assets/img/LucianoGimenezLogo1.png" alt="website logo"></a>
+    <ul>
+        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="../../../portfolio/index.html">Portfolio</a></li>           
+        <li><a href="../../../contact/index.html" id="btn-cta" class="btn-rounded"><i class="fas fa-envelope"></i><span>Contact us</span></a></li>
+    </ul>
+    <div class="item-icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+</nav>
         
     <!-- header hero block -->
     <header class="hero-block hero-block-js">
@@ -149,43 +148,40 @@
 
     <script>
         document.querySelector("#btn-quotes").addEventListener("click", fetchRandomNumQuotes);
-
-async function fetchRandomNumQuotes() { 
-    await fetch('https://type.fit/api/quotes')
-
-        .then(response => {
-            if (response.status !== 200) {
-                console.log('Error Status Code: ' + response.status);
-                return;
+        
+        async function fetchRandomNumQuotes() { 
+                await fetch('https://type.fit/api/quotes')
+    
+                    .then(response => {
+                        if (response.status !== 200) {
+                            console.log('Error Status Code: ' + response.status);
+                            return;
+                        }
+                        response.json().then((data) => {
+                            const lowerNum = getRandomInt(0, data.length-10);
+                            const upperNum = lowerNum + 8; 
+                            let html_block = "";
+                            for (i= lowerNum; i <= upperNum; i++) { 
+                                //console.log(`${[i]}: ${data[i].text} Source: ${data[i].author}`);
+                                html_block += `<div class="col-3"><p><span>&#8220;</span>${data[i].text}<span>&#8221;</span></p><h3>${data[i].author}</h3></div>`;
+                            }
+                            document.querySelector("#quotes-box").innerHTML = html_block;
+                        });
+    
+                    })
+    
+                    .catch(error => {
+                        // handle any error
+                    });
+    
             }
-            response.json().then((data) => {
-                console.log(data);
-                const lowerNum = getRandomInt(0, data.length-10);
-                const upperNum = lowerNum + 9; 
-                let html_block = "";
-                for (i= lowerNum; i < upperNum; i++) { 
-                    html_block = html_block + `
-“${data[i].text}”
+    
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1) + min); 
+            }
 
-${data[i].author}
-`;
-                    document.getElementById("quotes-box").innerHTML = html_block;
-                }
-            });
-        })
-
-        .catch(error => {
-            // handle any error
-       });
-
-}
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); 
-}
- 
     </script>
 
     
