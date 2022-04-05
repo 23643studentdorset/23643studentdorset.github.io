@@ -1,4 +1,4 @@
-import { calculate } from './perform-calculations'
+import { calculate } from './perform-calculations.js'
 
 const calculator = {
     displayValue: '0',
